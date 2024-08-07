@@ -7,7 +7,7 @@ import paho.mqtt.client as mqtt
 STATE_FILE_PATH = os.path.expanduser("~/Desktop")
 STATE_FILE = os.path.join(STATE_FILE_PATH, "zoom-state.txt")
 
-UPDATE_TOPIC = "home/zoom"
+UPDATE_TOPIC = "andrew/zoom"
 
 CHECK_INTERVAL_SECS = 5
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     client = mqtt.Client()
     client.on_connect = on_connect
     client.on_message = on_message
-    client.connect("localhost", 1883, 60)
+    client.connect("10.115.18.5", 1883, 60)
     client.loop_start()
 
     digest = None

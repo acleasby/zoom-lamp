@@ -2,7 +2,7 @@ from listener import MqttListener
 from PySide6 import QtCore, QtWidgets, QtGui
 import sys
 
-UPDATE_TOPIC = "home/zoom"
+UPDATE_TOPIC = "andrew/zoom"
 
 
 def get_background_color(meeting, video_muted, audio_muted):
